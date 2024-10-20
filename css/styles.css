@@ -18,14 +18,14 @@
 /**********************************/
 
 :root {
-    --plaque-shadow: .4rem .4rem 1.8rem #7e7e7e, -.4rem -.4rem 2rem #f8f8f8;
-	--plaque-background: linear-gradient(to bottom, #adafb3 50%, #c7c7c9 80%);
+    --plaque-shadow: .4rem .4rem 1.8rem #f8d75385, -.4rem -.4rem 2rem;
+	--plaque-background: linear-gradient(to bottom, #dda90d 50%, #f2c22d 80%);
 	
-	--btn-shadow: inset .6rem .6rem .9rem #484541, inset -.4rem -.4rem 1.4rem #5c5c58;
-    --btn-filter: drop-shadow(.1rem .2rem .5rem #424242);
+	--btn-shadow: inset .6rem .6rem .9rem #3f3301, inset -.4rem -.4rem 1.4rem;
+    --btn-filter: drop-shadow(.1rem .2rem .5rem #dda90d);
 
 	--clr-description: #edeff2;
-	--clr-btn: #868681;
+	--clr-btn: #967a00;
 	--clr-youtube-red: #c00;
 	--clr-youtube-white: #fff;
 
@@ -36,21 +36,58 @@
 /* 1. Estilos gerais
 /**********************************/
 
+html{
+	font-size: 62.5%;
+}
+
+
 body {
-	background-image: url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/retina_wood.png');
+	background-color: #1a1a1a;
+	font-family: var(--ff);
 }
 
 /**********************************/
 /* 2. Placa
 /**********************************/
 
-
+.plaque{
+	background: var(--plaque-background);
+	width: 43rem;
+	height: 55rem;
+	margin: 0 auto;
+	margin-top: 5rem;
+	box-shadow: var(--plaque-shadow);
+	display: flex;
+	justify-content: center;
+}
 
 /**********************************/
 /* 3. Botão
 /**********************************/
 
+.button{
+	background: var(--clr-btn);
+	width: 19rem;
+	height: 13rem;
+	box-shadow: var(--btn-shadow);
+	border-radius: 2.5rem;
+	opacity: 0.7;
+	position: relative;
+	top: 10rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
+
+.button__play {
+	width: 0;
+	height: 0;
+	border-top: 3rem solid transparent;
+	border-bottom: 3rem solid transparent;
+	border-left: 5rem solid #ffbf00 ;
+	filter: var(--btn-filter);
+}
 
 /**********************************/
 /* 4. Descrição
